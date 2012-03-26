@@ -1,0 +1,11 @@
+#tshark
+
+tshark -rfilename -i ethx -q
+安静的把请求保存到filename当中
+
+tshark -rfilename -x -V
+从文件里读取并分析
+
+tshark -i eth0 -F visual -f "tcp port 80" -p -R http.request -N mntC
+tshark -ilo -F visual -f "tcp port 80" -p -R http.request -N mntC -x
+tshark -i lo  -R http.request -s 2000 -x
